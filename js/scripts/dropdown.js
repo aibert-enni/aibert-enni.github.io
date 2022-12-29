@@ -1,5 +1,7 @@
+import { changeColor } from './changeColor.js';
 export function dropdown() {
     const dropdowns = document.querySelectorAll('.theme-switcher');
+    let color;
 
     dropdowns.forEach(dropdown => {
         const select = dropdown.querySelector('.switcher-select');
@@ -24,6 +26,8 @@ export function dropdown() {
                     option.classList.remove('active-theme');
                 });
                 option.classList.add('active-theme');
+                color = selected.innerText.split(" ")[0].toLowerCase();
+                changeColor(color);
             });
             
         });

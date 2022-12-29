@@ -1,0 +1,71 @@
+body {
+    color: #575757;
+}
+
+.navbar__generic {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
+}
+
+.header__generic {
+    background: linear-gradient(100.73deg, rgba(190, 238, 245, 0.5) 1.11%, rgba(189, 170, 225, 0.5) 33.86%, rgba(39, 163, 213, 0.5) 68.61%, rgba(247, 155, 185, 0.5) 97.83%);
+
+}
+
+.shadow-effect__generic {
+    display: none;
+}
+
+.info-title__generic {
+    color: #575757;
+}
+
+.button__generic {
+    background-color: #FF90B5;
+    color: #fffcfc;
+}
+
+.button:hover__generic {
+    background-color: #ffaadc;
+    box-shadow: 0 0 5px #ffaadc,
+              0 0 15px #ffaadc,
+              0 0 30px #ffaadc,
+              0 0 60px #ffaadc;
+}
+
+.main__generic {
+    background-color: #FFEBF1;
+}
+
+.main-article__text__generic {
+    color: #575757;
+}
+
+.card__generic {
+    background-color: #FFFFFF;
+    box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+}
+
+.about-team__generic {
+    background-color: #FFEBF1;
+}
+
+.about-portfolio__generic {
+    background-color: #FFEBF1;
+}
+
+.contact-us__generic {
+    background-color: #FFEBF1;
+}
+
+.contact-us_form-input__generic {
+    border: 1px solid #656565;
+}
+
+.footer__generic {
+    background-color: #F03A76;
+}
+
+.footer__copyright-text__generic {
+    color: #FFFFFF;
+}
