@@ -1,0 +1,118 @@
+.body__dark {
+    color: #DEECF9;
+}
+
+/* button */
+.button__dark {
+    background-color: #F03A76;
+}
+
+.button__dark:hover {
+    background-color: #EA047E;
+    box-shadow: 0 0 5px #EA047E,
+              0 0 15px #EA047E,
+              0 0 30px #EA047E,
+              0 0 60px #EA047E;
+}
+
+.light-blur-effect__dark {
+    background-color: #BEEEF5;
+}
+
+.line__dark {
+    background-color: #F03A76;
+}
+
+.navbar__dark {
+    background-color: #000;
+}
+
+.nav-logo__dark {
+    color: #F03A76;
+}
+
+.switcher-select__dark {
+    background-color: #232323;
+    color: #000;
+}
+
+.switcher-select__dark:hover {
+    background-color: #343434;
+}
+
+.switcher-select-clicked__dark {
+    border: 2px #7a7a7a solid;
+}
+
+.switcher-menu__dark {
+    background-color: #232323;
+}
+
+.switcher-menu__dark li:hover {
+    background-color: #343434;
+}
+
+.active-theme__dark {
+    background: #464646;
+}
+
+.header__dark {
+    background-color: #181823;
+}
+
+.shadow-effect__dark {
+    background-color: #000;
+}
+
+.title__span__dark {
+    color: #F03A76;
+}
+
+.main__dark {
+    background-color: #181823;
+}
+
+.main-article__text__dark {
+    color: #C7E0FA;
+}
+
+.card__dark {
+    background-color: #000;
+}
+
+.short-info_line__dark {
+    background-color: #14B8E4;
+}
+
+.about-team__dark {
+    background-color: #000;
+}
+
+.about-portfolio__dark{
+    background-color: #181823;
+}
+
+.slider-arrow__dark {
+    background-color: #F03A76;
+}
+
+.about-portfolio-line__dark {
+    background-color: #683CB8;
+}
+
+.contact-us__dark {
+    background-color: #181823;
+}
+
+.contact-us_form-input  {
+    border: 1px solid #D5D5D5;
+}
+
+.footer__dark {
+    background-color: #000;
+}
+
+.footer__title__dark {
+    color: #DEECF9;
+}
+

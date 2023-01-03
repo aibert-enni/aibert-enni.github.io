@@ -22,5 +22,15 @@ export function slider(){
             remove();
             slides.item(index).classList.toggle("slides-active");
         })
+
+        next.addEventListener('click', () => {
+            if(index == slides.length-1) {
+                index = 0;
+            } else {
+                index++;
+            }
+            remove();
+            slides.item(index).classList.toggle("slides-active");
+        })
     })
 }

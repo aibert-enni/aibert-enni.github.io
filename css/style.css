@@ -5,7 +5,6 @@
 body{
     font-family: 'Lato', sans-serif;
     font-size: calc(1.125em * var(--text-multiplyer));
-    color: #DEECF9;
 }
 
 a {
@@ -19,7 +18,6 @@ a {
 }
 
 .button {
-    background-color: #F03A76;
     padding: 10px 50px;
     border-radius: 2em;
     font-size: calc(1.563em * var(--text-multiplyer));
@@ -29,21 +27,12 @@ a {
     text-transform: capitalize;
 }
 
-.button:hover {
-    background-color: #EA047E;
-    box-shadow: 0 0 5px #EA047E,
-              0 0 15px #EA047E,
-              0 0 30px #EA047E,
-              0 0 60px #EA047E;
-}
-
 .light-blur-effect {
     position: absolute;
     z-index: 1;
     right: 0;
     height: 342px;
     width: 341px;
-    background-color: #BEEEF5;
     filter: blur(130px);
     opacity: 0.4;
     display: block;
@@ -67,7 +56,6 @@ a {
 .line {
     height: 2px;
     width: 70px;
-    background-color: #F03A76;
     margin: 30px 0 20px 0;
 }
 
@@ -90,7 +78,6 @@ a {
 }
 
 .nav-logo {
-    color: #F03A76;
     font-size: calc(1.875em * var(--text-multiplyer));
     font-weight: 900;
     line-height: 54px;
@@ -113,20 +100,12 @@ a {
     border-radius: 10px;
     padding: 10px;
 
-    background-color: #232323;
-    color: #000;
     font-weight: 700;
 
     transition: background-color 0.3s;
 }
 
-.switcher-select:hover {
-    background-color: #343434;
-}
 
-.switcher-select-clicked {
-    border: 2px #7a7a7a solid;
-}
 
 .caret {
     width: 0;
@@ -143,7 +122,6 @@ a {
 
 .switcher-menu {
     font-weight: 700;
-    background-color: #232323;
     position: absolute;
     line-height: 22px;
     padding: 5px;
@@ -169,13 +147,7 @@ a {
     cursor: pointer;
 }
 
-.switcher-menu li:hover {
-    background-color: #343434;
-}
 
-.active-theme {
-    background: #464646;
-}
 
 /* theme colors */
 #generic {
@@ -200,13 +172,11 @@ a {
 }
 /* header */
 .header {
-    background-color: #181823;
     position: relative;
     z-index: 0;
 }
 
 .shadow-effect {
-    background-color: #000;
     opacity: 0.5;
     position: absolute;
     width: 100%;
@@ -236,9 +206,7 @@ a {
     text-transform: capitalize;
 }
 
-.title__span_pink {
-    color: #F03A76;
-}
+
 
 .info-text {
     line-height: 38px;
@@ -275,7 +243,6 @@ a {
 /* main */
 .main {
     position: relative;
-    background-color: #181823;
 }
 
 .main-article {
@@ -286,7 +253,6 @@ a {
 }
 
 .main-article__text {
-    color: #C7E0FA;
     text-align: center;
     line-height: 38px;
     max-width: 749px;
@@ -300,7 +266,6 @@ a {
 
 .card {
     display: flex;
-    background-color: #000;
     max-width: 389px;
     max-height: 337px;
     border-radius: 15px;
@@ -345,14 +310,10 @@ a {
 .short-info_line {
     height: 2px;
     width: 70px;
-    background-color: #14B8E4;
     margin: 30px 0 20px 0;
 }
 
 /* about team  content*/
-.about-team {
-    background-color: #000;
-}
 
 .about-team-content {
     align-items: normal;
@@ -364,9 +325,6 @@ a {
 }
 
 /* portfolio */
-.about-portfolio{
-    background-color: #181823;
-}
 
 .about-portfolio_slider {
     position: relative;
@@ -381,7 +339,6 @@ a {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #F03A76;
     width: 35px;
     height: 35px;
     cursor: pointer;
@@ -399,9 +356,7 @@ a {
     max-width: 554px;
 }
 
-.about-portfolio-line {
-    background-color: #683CB8;
-}
+
 
 .about-portfolio__button {
     display: inline-block;
@@ -419,9 +374,7 @@ a {
 }
 
 /* contact us */
-.contact-us {
-    background-color: #181823;
-}
+
 
 .contact-us-content {
     display: flex;
@@ -437,7 +390,7 @@ a {
 
 .contact-us__form {
     display: grid;
-    grid-auto-columns: 1fr 1fr;
+    grid-template-columns: minmax(auto, 589px) minmax(auto, 589px);;
     grid-template-rows: auto auto 70px;
     grid-gap: 30px 100px;
     justify-content: space-between;
@@ -469,7 +422,6 @@ a {
     padding-left: 10px;
     height: 50px;
     text-transform: capitalize;
-    border: 1px solid #D5D5D5;
     border-radius: 10px;
 }
 
@@ -480,7 +432,6 @@ a {
 
 /* footer */
 .footer {
-    background-color: #000;
     padding: 100px 0;
 }
 
@@ -490,7 +441,6 @@ a {
 }
 
 .footer__title{
-    color: #DEECF9;
     font-size:calc(1.9em * var(--text-multiplyer));
     font-weight: 700;
     line-height: 28.8px;

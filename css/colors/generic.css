@@ -1,10 +1,57 @@
-body {
+.body__generic {
     color: #575757;
+}
+
+.line__generic {
+    background-color: #F03A76;
+}
+
+.short-info_line__generic {
+    background-color: #14B8E4;
+}
+
+.about-portfolio-line__generic {
+    background-color: #683CB8;
 }
 
 .navbar__generic {
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo__generic {
+    color: #F03A76;
+}
+
+
+.switcher-select__generic {
+    background-color: #2ec4b6;
+    color: #cbf3f0;
+}
+
+.caret__generic {
+    border-top: 6px solid #fff;
+}
+
+.switcher-select__generic:hover {
+    background-color: #cbf3f0;
+    color: #2ec4b6;
+}
+
+.switcher-menu__generic {
+    background-color: #2ec4b6;
+}
+
+.active-theme__generic {
+    background: #84dcc6;
+}
+
+.switcher-menu__generic li:hover {
+    background-color: #84dcc6;
+}
+
+.switcher-select-clicked__generic {
+    border: 2px #cbf3f0 solid;
 }
 
 .header__generic {
@@ -16,6 +63,10 @@ body {
     display: none;
 }
 
+.title__span__generic {
+    color: #F03A76;
+}
+
 .info-title__generic {
     color: #575757;
 }
@@ -25,12 +76,16 @@ body {
     color: #fffcfc;
 }
 
-.button:hover__generic {
+.button__generic:hover {
     background-color: #ffaadc;
     box-shadow: 0 0 5px #ffaadc,
               0 0 15px #ffaadc,
               0 0 30px #ffaadc,
               0 0 60px #ffaadc;
+}
+
+.main-article__text__generic {
+    color: #575757;
 }
 
 .main__generic {
@@ -54,6 +109,10 @@ body {
     background-color: #FFEBF1;
 }
 
+.slider-arrow__generic {
+    background-color: #F03A76;
+}
+
 .contact-us__generic {
     background-color: #FFEBF1;
 }
@@ -64,6 +123,10 @@ body {
 
 .footer__generic {
     background-color: #F03A76;
+}
+
+.footer__title__generic {
+    color: #DEECF9;
 }
 
 .footer__copyright-text__generic {
