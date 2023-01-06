@@ -1,0 +1,143 @@
+.body__glow {
+    color: #FFFFFF;
+}
+
+/* button */
+
+.button__glow {
+    background-color: #5129A6;
+    color: #FFFFFF;
+    box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3), 10px 10px 20px #2A2947;
+}
+
+.button__glow:hover {
+    background-color: #5129A6;
+    box-shadow: 0 0 5px #5129A6,
+              0 0 15px #5129A6,
+              0 0 30px #5129A6,
+              0 0 60px #5129A6;
+}
+
+.info-button__glow {
+    background-color: #6865BF;
+}
+
+.glow-blur-effect__glow {
+    background-color: #BEEEF5;
+}
+
+.line__glow {
+    background-color: #1BF2A3;
+}
+
+.navbar__glow {
+    background-color: #6865BF;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo__glow {
+    color: #FFFFFF;
+}
+
+.switcher-select__glow {
+    background-color: #6e44ff;
+    color: #fff;
+}
+
+.switcher-select__glow:hover {
+    background-color: #b892ff;
+}
+
+.switcher-select-clicked__glow {
+    border: 2px #7161ef solid;
+}
+
+.switcher-menu__glow {
+    background-color: #957fef;
+}
+
+.switcher-menu__glow li:hover {
+    background-color: #b892ff;
+}
+
+.active-theme__glow {
+    background: #7161ef;
+}
+
+.header__glow {
+    background-color: #6865BF;
+}
+
+.shadow-effect__glow {
+    display: none;
+}
+
+
+
+.info-title__glow {
+    color: #FFFFFF
+}
+
+.title__span__glow {
+    color: #FFFFFF;
+}
+
+.main__glow {
+    background-color: #5129A6;
+}
+
+.main-article__text__glow {
+    color: #FFFFFF;
+}
+
+.card__glow {
+    background-color: #6865BF;
+}
+
+.short-info_line__glow {
+    background-color: #1BF2A3;
+}
+
+.about-team__glow {
+    background-color: #6865BF;
+}
+
+.about-team_line__glow {
+    background-color: #5129A6;
+}
+
+.about-portfolio__glow{
+    background-color: #5129A6;
+}
+
+.slider-arrow__glow {
+    background-color: #6865BF;
+}
+
+.about-portfolio-line__glow {
+    background-color: #8435F2;
+}
+
+.contact-us__glow {
+    background-color: #5129A6;
+}
+
+.contact-us__line__glow {
+ background-color: #8435F2;
+}
+
+.contact-us_form-input  {
+    border: 1px solid #D5D5D5;
+}
+
+.footer__glow {
+    background-color: #6865BF;
+}
+
+.footer__title__glow {
+    color: #FFFFFF;
+}
+
+.footer__link__glow {
+    color: #FFFFFF;
+}

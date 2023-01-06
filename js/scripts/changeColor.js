@@ -1,6 +1,6 @@
 let prevColor;
 export function changeColor(color) {
-    const classes = ["body",  "light-blur-effect", "line", "nav-logo",  "navbar", "switcher-select", "caret", "switcher-menu", "header", "shadow-effect", "title__span", "info-title", "button", "main", "main-article__text" ,"card", "short-info_line", "about-team", "about-portfolio", "slider-arrow", "about-portfolio-line", "contact-us", "contact-us_form-input", "footer", "footer__title", "footer__copyright-text"];
+    const classes = ["body",  "light-blur-effect", "line", "nav-logo",  "navbar", "switcher-select", "caret", "switcher-menu", "header", "shadow-effect", "title__span", "info-title", "info-button", "button", "main", "main-article__text" ,"card", "short-info_line", "about-team", "about-team_line", "about-portfolio", "slider-arrow", "about-portfolio-line", "contact-us", "contact-us__line", "contact-us_form-input", "footer", "footer__title", "footer__link", "footer__copyright-text"];
     classes.forEach(element => {
         let block = document.getElementsByClassName(element);
         for(let i = 0; i < block.length; i++) {

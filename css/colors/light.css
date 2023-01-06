@@ -1,0 +1,129 @@
+.body__light {
+    color: #575757;
+}
+
+/* button */
+.button__light {
+    background-color: #F03A76;
+    color: #FFFFFF;
+}
+
+.button__light:hover {
+    background-color: #F03A76;
+    box-shadow: 0 0 5px #F03A76,
+              0 0 15px #F03A76,
+              0 0 30px #F03A76,
+              0 0 60px #F03A76;
+}
+
+.light-blur-effect__light {
+    background-color: #BEEEF5;
+}
+
+.line__light {
+    background-color: #F03A76;
+}
+
+.navbar__light {
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo__light {
+    color: #F03A76;
+}
+
+.switcher-select__light {
+    background-color: #fff1e6;
+    color: #000000;
+}
+
+.switcher-select__light:hover {
+    background-color: #fcbf49;
+}
+
+.switcher-select-clicked__light {
+    border: 2px #fcbf49 solid;
+}
+
+.switcher-menu__light {
+    background-color: #eae2b7;
+}
+
+.switcher-menu__light li:hover {
+    background-color: #fcbf49;
+}
+
+.active-theme__light {
+    background: #fcbf49;
+}
+
+.header__light {
+    background-color: #FFFFFF;
+}
+
+.shadow-effect__light {
+    display: none;
+}
+
+
+
+.info-title__light {
+    color: #4A4A4A;
+}
+
+.title__span__light {
+    color: #F03A76;
+}
+
+.main__light {
+    background-color: #FFFFFF;;
+}
+
+.main-article__text__light {
+    color: #575757;
+}
+
+.card__light {
+    background-color: #FFFFFF;
+}
+
+.short-info_line__light {
+    background-color: #14B8E4;
+}
+
+.about-team__light {
+    background-color: #FFFFFF;
+}
+
+.about-portfolio__light{
+    background-color: #FFFFFF;
+}
+
+.slider-arrow__light {
+    background-color: #F03A76;
+}
+
+.about-portfolio-line__light {
+    background-color: #683CB8;
+}
+
+.contact-us__light {
+    background-color: #FFFFFF;
+}
+
+.contact-us_form-input  {
+    border: 1px solid #D5D5D5;
+}
+
+.footer__light {
+    background-color: #FDE8EF;
+}
+
+.footer__title__light {
+    color: #4A4A4A;
+}
+
+.footer__link__light {
+    color: #4A4A4A;
+}

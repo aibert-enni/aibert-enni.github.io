@@ -1,0 +1,143 @@
+.body__neutral {
+    color: #575757;
+}
+
+/* button */
+
+.button__neutral {
+    background-color: #F2E5E4;
+    color: #8C766D;
+    box-shadow: -5px -10px 15px rgba(255, 255, 255, 0.8), 5px 10px 15px #9A9696;
+}
+
+.button__neutral:hover {
+    background-color: #F2E5E4;
+    box-shadow: 0 0 5px #F2E5E4,
+              0 0 15px #F2E5E4,
+              0 0 30px #F2E5E4,
+              0 0 60px #F2E5E4;
+}
+
+.info-button__neutral {
+    background-color: #F2E5E4;
+}
+
+.neutral-blur-effect__neutral {
+    background-color: #BEEEF5;
+}
+
+.line__neutral {
+    background-color: #8C766D;
+}
+
+.navbar__neutral {
+    background-color: #D9C5C1;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo__neutral {
+    color: #fff;
+}
+
+.switcher-select__neutral {
+    background-color: #dcafa9;
+    color: #fff;
+}
+
+.switcher-select__neutral:hover {
+    background-color: #eed7d3;
+}
+
+.switcher-select-clicked__neutral {
+    border: 2px #ddb1a8 solid;
+}
+
+.switcher-menu__neutral {
+    background-color: #d9c5c1;
+}
+
+.switcher-menu__neutral li:hover {
+    background-color: #eed7d3;
+}
+
+.active-theme__neutral {
+    background: #f7e7df;
+}
+
+.header__neutral {
+    background-color: #D9C5C1;
+}
+
+.shadow-effect__neutral {
+    display: none;
+}
+
+
+
+.info-title__neutral {
+    color: #8C766D;
+}
+
+.title__span__neutral {
+    color: #8C766D;
+}
+
+.main__neutral {
+    background-color: #F2E5E4;
+}
+
+.main-article__text__neutral {
+    color: #575757;
+}
+
+.card__neutral {
+    background-color: #FFFFFF;
+}
+
+.short-info_line__neutral {
+    background-color: #BFBDBD;
+}
+
+.about-team__neutral {
+    background-color: #D8CFCB;
+}
+
+.about-team_line__neutral {
+    background-color: #F2E5E4;
+}
+
+.about-portfolio__neutral{
+    background-color: #F2E5E4;
+}
+
+.slider-arrow__neutral {
+    background-color: #F03A76;
+}
+
+.about-portfolio-line__neutral {
+    background-color: #8C766D;
+}
+
+.contact-us__neutral {
+    background-color: #F2E5E4;
+}
+
+.contact-us__line__neutral {
+ background-color: #8C766D;
+}
+
+.contact-us_form-input  {
+    border: 1px solid #D5D5D5;
+}
+
+.footer__neutral {
+    background-color: #D9C5C1;
+}
+
+.footer__title__neutral {
+    color: #8C766D;
+}
+
+.footer__link__neutral {
+    color: #575757;
+}
