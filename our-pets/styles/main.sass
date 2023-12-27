@@ -1,0 +1,191 @@
+@import "../../base-styles/base.sass"
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+
+header
+    background-color: $color-light-xl
+
+.header-container
+    padding: 30px 0
+    @include display-flex(space-between, center)
+
+.logo-title
+    @include custom-font($font-size: $logo-title, $color: $color-dark-l, $line-height: 110%, $letter-spacing: 1.92px)
+    padding-bottom: 10px
+
+.logo-subtitle
+    @include custom-font($font-size: $logo-subtitle, $color: $color-dark-3xl, $letter-spacing: 1.3px)
+
+.nav
+    display: flex
+    font-family: Arial, Helvetica, sans-serif
+
+.nav-item__text
+    @include custom-font($font-size: $paragraph-l, $color: $color-dark-l, $line-height: 160%)
+
+.nav-item__text:hover
+    color: $color-dark-3xl
+    cursor: pointer
+
+.nav-item__text:active
+    color: $color-dark-3xl
+    border-bottom: 3px solid $color-primary
+
+.nav-item:not(:first-child)
+    margin-left: 30px
+
+main
+    background-color: $color-light-l
+
+.main-container
+    padding: 100px 40px
+
+.pets-content
+    @include display-flex($justify-content: center, $align-items: center)
+    flex-direction: column
+    gap: 45px
+
+.pets-heading
+    @include custom-font($font-size: $h2, $color: $color-dark-l, $line-height: 130%, $letter-spacing: 2.1px)
+    text-align: center
+    
+.pets-cards
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: 1fr 1fr
+    gap: 30px 40px
+
+.pets-cards__card
+    flex: 0 0 auto
+    max-width: 270px
+    width: 100%
+    padding-bottom: 30px
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 30px
+    background-color: $color-light-s
+    border-radius: 9px
+
+.pets-cards__card-title
+    @include custom-font($font-size: $h3, $color: $color-dark-l, $letter-spacing: 1.2px)
+
+.pets-cards__card-button
+    border: 2px solid $color-primary
+
+footer
+    background: $start-screen-background
+
+.footer-content
+    padding-top: 40px
+    @include display-flex($justify-content: space-between, $align-items: center)
+
+.contact-info
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: 40px
+
+.contact-info__title
+    max-width: 280px
+    @include custom-font($font-size: $h2, $color: $color-light-xl, $line-height: 130%, $letter-spacing: 2.1px)
+    
+.contact-link
+    max-width: 302px
+    @include display-flex($align-items: center)
+    gap: 20px
+    
+.contact-link__text
+    @include custom-font($font-size: $h3 , $color: $color-primary, $line-height: 115%, $letter-spacing: 1.2px)
+
+.modal
+    display: none
+    position: fixed /* Stay in place */
+    z-index: 1 /* Sit on top */
+    left: 0
+    top: 0
+    width: 100% /* Full width */
+    height: 100% /* Full height */
+    background-color: rgb(0,0,0) /* Fallback color */
+    background-color: rgba(0,0,0,0.4) /* Black w/ opacity */
+    overflow: hidden
+
+.modal-window
+    position: relative
+    display: flex
+    background-color: #fefefe
+    margin: 12% auto /* 15% from the top and centered */
+    border-radius: 9px
+    max-width: 900px
+
+.modal-window__close-button
+    border: none
+    position: absolute
+    right: -50px
+    top: -40px
+
+.modal-image
+    height: 500px
+
+.modal-content
+    max-width: 350px
+    margin: 0 auto
+    display: inline-flex
+    flex-direction: column
+    justify-content: center
+    gap: 40px
+    color: #000
+
+.modal-title__heading
+    color: #000
+
+.modal-title__subheading
+    @include custom-font($font-size: $h3, $color: #000, $line-height: 115%, $letter-spacing: 1.2px)
+    padding-top: 10px
+
+.modal-description
+    line-height: 110%
+    letter-spacing: 0.9px
+
+.modal-list li:not(:last-child)
+    padding-bottom: 10px
+
+.modal-list__item
+    display: flex
+    gap: 10px
+
+.modal-list__item:before
+    content: "\2022"
+    font-weight: bold
+    color: $color-primary
+
+.modal-list__text
+    font-weight: bold
+    line-height: 110%
+    letter-spacing: 0.9px
+
+.modal-list__span
+    font-weight: normal
+
+.pets-pagination
+    display: flex
+    gap: 20px
+
+.pagination-btn
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 52px
+    height: 52px
+    border: 2px solid $color-primary
+    border-radius: 100px
+
+    &_disabled
+        color: $color-dark-s
+        border-color: $color-dark-s
+        cursor: auto
+
+.pagination-number
+    background-color: $color-primary

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -107,7 +108,7 @@ header {
 }
 
 .home {
-  background: url(../assets/images/start-screen.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: url(../../assets/images/start-screen.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
   padding-top: 180px;
 }
 
@@ -340,7 +341,7 @@ header {
 }
 
 footer {
-  background: url(../assets/images/start-screen.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  background: url(../../assets/images/start-screen.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
 }
 
 .footer-content {
@@ -378,6 +379,91 @@ footer {
   color: #F1CDB3;
   line-height: 115%;
   letter-spacing: 1.2px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.modal-window {
+  position: relative;
+  display: flex;
+  background-color: #fefefe;
+  margin: 12% auto;
+  border-radius: 9px;
+  max-width: 900px;
+}
+
+.modal-window__close-button {
+  border: none;
+  position: absolute;
+  right: -50px;
+  top: -40px;
+}
+
+.modal-image {
+  height: 500px;
+}
+
+.modal-content {
+  max-width: 350px;
+  margin: 0 auto;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  color: #000;
+}
+
+.modal-title__heading {
+  color: #000;
+}
+
+.modal-title__subheading {
+  font-size: 20px;
+  color: #000;
+  line-height: 115%;
+  letter-spacing: 1.2px;
+  padding-top: 10px;
+}
+
+.modal-description {
+  line-height: 110%;
+  letter-spacing: 0.9px;
+}
+
+.modal-list li:not(:last-child) {
+  padding-bottom: 10px;
+}
+
+.modal-list__item {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-list__item:before {
+  content: "•";
+  font-weight: bold;
+  color: #F1CDB3;
+}
+
+.modal-list__text {
+  font-weight: bold;
+  line-height: 110%;
+  letter-spacing: 0.9px;
+}
+
+.modal-list__span {
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=main.css.map */
