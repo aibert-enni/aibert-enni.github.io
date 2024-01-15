@@ -7,7 +7,9 @@ const breed = document.querySelector('.modal-title__subheading');
 const description = document.querySelector('.modal-description');
 const parameters = document.querySelectorAll('.modal-list__span');
 
-const closeBtn = document.querySelector('.modal-window__close-button');
+const closeBtn = document.querySelector('.close-button__img');
+
+const body = document.querySelector('body');
 
 export function showModal() {
     const id = this.parentElement.getAttribute('data-product-id');
@@ -23,10 +25,15 @@ export function showModal() {
     parameters[3].textContent = pet['parasites'];
 
     modalWindow.style.display = 'block';
+
+    body.style.overflow = 'hidden';
 }
 
 export function closeModalWindow() {
-    closeBtn.addEventListener('click', () => {
-        modalWindow.style.display = "none";
+    modalWindow.addEventListener('click', (event) => {
+        if(event.target == modalWindow || event.target == closeBtn) {
+            modalWindow.style.display = "none";
+            body.style.overflow = 'visible';
+        }
     })
 }

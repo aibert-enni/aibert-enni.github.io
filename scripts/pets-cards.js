@@ -11,6 +11,13 @@ const paginationEnd = document.querySelector('.pagination-btn__end');
 const buttons = [paginationStart, paginationPrev, paginationNext, paginationEnd];
 
 let cardsNumber = 8;
+
+if(window.innerWidth <= 992 & window.innerWidth > 767) {
+    cardsNumber = 9;
+} else if(window.innerWidth <= 510) {
+    cardsNumber = 3;
+}
+console.log(pets.length);
 let pageNumber = 1;
 let activeCardsId = 0;
 
@@ -84,7 +91,7 @@ const prevCards = () => {
 }
 
 const endCards = () => {
-    activeCardsId = pets.length - cardsNumber + 1;
+    activeCardsId = pets.length - cardsNumber;
     generateCards(cardsNumber);
     setPaginationNumber(Math.ceil(activeCardsId / cardsNumber) + 1);
     checkPagination();

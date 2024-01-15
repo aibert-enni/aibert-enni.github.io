@@ -1,29 +1,98 @@
 @import "../../base-styles/base.sass"
 
+img
+    block-size: auto
+    object-fit: cover
+    
 .container
     max-width: 1200px
     margin: 0 auto
+    padding: 0 40px
+
+    @include breakpoint($point: lg)
+        padding: 0 30px
+
+    @include breakpoint($point: esm)
+        padding: 0 10px
+
+.burger-menu
+    display: none
+
+    @include breakpoint($point: md)
+        display: flex
+        flex-direction: column
+        gap: 8px
+        position: relative
+        z-index: 1000
+        transition: 0.4s transform
+
+.burger-menu_active
+    transform: rotate(90deg)
+
+.line
+    background-color: #000
+    width: 30px
+    height: 2px
+
 
 header
     background-color: $color-light-xl
+    padding: 30px 0
+    overflow: hidden
 
 .header-container
-    padding: 30px 0
     @include display-flex(space-between, center)
 
+.logo
+    display: flex
+    flex-direction: column
+
 .logo-title
-    @include custom-font($font-size: $logo-title, $color: $color-dark-l, $line-height: 110%, $letter-spacing: 1.92px)
+    @include custom-font($font-size: --logo-title, $color: $color-dark-l, $line-height: 110%, $letter-spacing: 1.92px)
     padding-bottom: 10px
 
 .logo-subtitle
-    @include custom-font($font-size: $logo-subtitle, $color: $color-dark-3xl, $letter-spacing: 1.3px)
+    @include custom-font($font-size: --logo-subtitle, $color: $color-dark-3xl, $letter-spacing: 1.3px)
 
-.nav
+.nav-list
     display: flex
     font-family: Arial, Helvetica, sans-serif
+    gap: 35px
+    transition: 0.45s transform
+
+    @include breakpoint($point: md)
+        gap: 40px
+        position: fixed
+        right: 0
+        top: 0
+        max-width: 320px
+        width: 100%
+        height: 100%
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        z-index: 999
+        background-color: $color-dark-3xl
+        transform: translateX(100%)
+
+.nav-list_active
+    transform: translateX(0px)
+
+.nav_blackout
+    position: fixed /* Stay in place */
+    z-index: 1 /* Sit on top */
+    left: 0
+    top: 0
+    width: 100% /* Full width */
+    height: 100% /* Full height */
+    background: rgba(41, 41, 41, 0.60)
+    overflow: hidden
 
 .nav-item__text
-    @include custom-font($font-size: $paragraph-l, $color: $color-dark-l, $line-height: 160%)
+    @include custom-font($font-size: --paragraph-l, $color: $color-dark-l, $line-height: 160%)
+
+    @include breakpoint($point: md)
+        font-size: --h2
 
 .nav-item__text:hover
     color: $color-dark-3xl
@@ -32,9 +101,6 @@ header
 .nav-item__text:active
     color: $color-dark-3xl
     border-bottom: 3px solid $color-primary
-
-.nav-item:not(:first-child)
-    margin-left: 30px
 
 main
     background-color: $color-light-l
@@ -48,7 +114,7 @@ main
     gap: 45px
 
 .pets-heading
-    @include custom-font($font-size: $h2, $color: $color-dark-l, $line-height: 130%, $letter-spacing: 2.1px)
+    @include custom-font($font-size: --h2, $color: $color-dark-l, $line-height: 130%, $letter-spacing: 2.1px)
     text-align: center
     
 .pets-cards
@@ -56,6 +122,15 @@ main
     grid-template-columns: repeat(4, 1fr)
     grid-template-rows: 1fr 1fr
     gap: 30px 40px
+
+    @include breakpoint($point: lg)
+        grid-template-columns: repeat(3, 1fr)
+
+    @include breakpoint($point: md)
+        grid-template-columns: repeat(2, 1fr)
+
+    @include breakpoint($point: 510px)
+        grid-template-columns: 1fr
 
 .pets-cards__card
     flex: 0 0 auto
@@ -70,10 +145,34 @@ main
     border-radius: 9px
 
 .pets-cards__card-title
-    @include custom-font($font-size: $h3, $color: $color-dark-l, $letter-spacing: 1.2px)
+    @include custom-font($font-size: --h3, $color: $color-dark-l, $letter-spacing: 1.2px)
 
 .pets-cards__card-button
     border: 2px solid $color-primary
+
+.pets-pagination
+    display: flex
+    gap: 20px
+
+    @include breakpoint($point: esm)
+        gap: 10px
+
+.pagination-btn
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 52px
+    height: 52px
+    border: 2px solid $color-primary
+    border-radius: 100px
+
+    &_disabled
+        color: $color-dark-s
+        border-color: $color-dark-s
+        cursor: auto
+
+.pagination-number
+    background-color: $color-primary
 
 footer
     background: $start-screen-background
@@ -81,6 +180,11 @@ footer
 .footer-content
     padding-top: 40px
     @include display-flex($justify-content: space-between, $align-items: center)
+    flex-wrap: wrap
+
+    @include breakpoint($point: lg)
+        gap: 60px
+        justify-content: center
 
 .contact-info
     display: flex
@@ -88,9 +192,15 @@ footer
     align-items: flex-start
     gap: 40px
 
+    @include breakpoint($point: esm)
+        align-items: center
+
 .contact-info__title
     max-width: 280px
-    @include custom-font($font-size: $h2, $color: $color-light-xl, $line-height: 130%, $letter-spacing: 2.1px)
+    @include custom-font($font-size: --h2, $color: $color-light-xl, $line-height: 130%, $letter-spacing: 2.1px)
+
+    @include breakpoint($point: esm)
+        text-align: center
     
 .contact-link
     max-width: 302px
@@ -98,7 +208,7 @@ footer
     gap: 20px
     
 .contact-link__text
-    @include custom-font($font-size: $h3 , $color: $color-primary, $line-height: 115%, $letter-spacing: 1.2px)
+    @include custom-font($font-size: --h3 , $color: $color-primary, $line-height: 115%, $letter-spacing: 1.2px)
 
 .modal
     display: none
@@ -108,9 +218,13 @@ footer
     top: 0
     width: 100% /* Full width */
     height: 100% /* Full height */
-    background-color: rgb(0,0,0) /* Fallback color */
-    background-color: rgba(0,0,0,0.4) /* Black w/ opacity */
+    background: rgba(41, 41, 41, 0.60)
     overflow: hidden
+
+    @include breakpoint($point: lg)
+        padding: 0 50px
+
+        
 
 .modal-window
     position: relative
@@ -120,14 +234,48 @@ footer
     border-radius: 9px
     max-width: 900px
 
+    @include breakpoint($point: xl)
+        max-width: 80vw
+
+    @include breakpoint($point: lg)
+        max-width: 630px
+        margin: 15% auto
+
+    @include breakpoint($point: 700px)
+        max-width: 80vw
+        margin: 30% auto
+
+    @include breakpoint($point: sm)
+        margin: 70% auto
+
+
+
 .modal-window__close-button
     border: none
     position: absolute
     right: -50px
     top: -40px
 
+    @include breakpoint($point: sm)
+        width: 52px
+        top: -50px
+        right: -40px
+
+
 .modal-image
-    height: 500px
+    width: 500px
+
+    @include breakpoint($point: xl)
+        width: 40vw
+
+    @include breakpoint($point: lg)
+        width: 350px
+
+    @include breakpoint($point: 700px)
+        max-width: 40vw
+
+    @include breakpoint($point: sm)
+        display: none
 
 .modal-content
     max-width: 350px
@@ -138,16 +286,40 @@ footer
     gap: 40px
     color: #000
 
+    @include breakpoint($point: lg)
+        max-width: 280px
+        gap: 20px
+        padding: 0 11px
+
+    @include breakpoint($point: sm)
+        padding: 10px
+        align-items: center
+
 .modal-title__heading
+    @include custom-font($font-size: --h2, $color: #000, $line-height: 115%, $letter-spacing: 1.2px)
     color: #000
 
+    @include breakpoint($point: sm)
+        text-align: center
+
 .modal-title__subheading
-    @include custom-font($font-size: $h3, $color: #000, $line-height: 115%, $letter-spacing: 1.2px)
+    @include custom-font($font-size: --h3, $color: #000, $line-height: 115%, $letter-spacing: 1.2px)
     padding-top: 10px
+
+    @include breakpoint($point: sm)
+        text-align: center
+
 
 .modal-description
     line-height: 110%
     letter-spacing: 0.9px
+
+    @include breakpoint($point: lg)
+        font-size: 13px
+
+    @include breakpoint($point: sm)
+        text-align: justify
+
 
 .modal-list li:not(:last-child)
     padding-bottom: 10px
@@ -169,23 +341,4 @@ footer
 .modal-list__span
     font-weight: normal
 
-.pets-pagination
-    display: flex
-    gap: 20px
 
-.pagination-btn
-    display: flex
-    justify-content: center
-    align-items: center
-    width: 52px
-    height: 52px
-    border: 2px solid $color-primary
-    border-radius: 100px
-
-    &_disabled
-        color: $color-dark-s
-        border-color: $color-dark-s
-        cursor: auto
-
-.pagination-number
-    background-color: $color-primary

@@ -10,23 +10,30 @@
     <header>
         <div class="header-container container">
             <div class="logo">
-                <p class="logo-title">Cozy House</p>
-                <p class="logo-subtitle">Shelter for pets in Boston</p>
+                <a href="../main-page/index.html" class="logo-title">Cozy House</a>
+                <a href="../main-page/index.html" class="logo-subtitle">Shelter for pets in Boston</a>
             </div>
-            <ul class="nav" role="navigation">
-                <li class="nav-item">
-                    <a href="#about" class="nav-item__text">About the shelter</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#pets" class="nav-item__text">Our pets</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#help" class="nav-item__text">Help the shelter</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contacts" class="nav-item__text">Contacts</a>
-                </li>
-            </ul>
+            <nav class="nav">
+                <ul class="nav-list" role="navigation">
+                    <li class="nav-item">
+                        <a href="../main-page/index.html" class="nav-item__text">About the shelter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#pets" class="nav-item__text">Our pets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../main-page/index.html#help" class="nav-item__text">Help the shelter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contacts" class="nav-item__text">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
     </header>
     <main>
@@ -53,23 +60,23 @@
                 <article class="contact-info">
                     <p class="contact-info__title">For questions and suggestions</p>
                     <div class="contact-link">
-                        <img class="contact-link__icon" src="../assets/icons/icon-email.svg" alt="">
-                        <p class="contact-link__text">email@shelter.com</p>
+                        <a href="mailto: aond@akmzdrav.kz"><img class="contact-link__icon" src="../assets/icons/icon-email.svg" alt=""></a>
+                        <a href="mailto: aond@akmzdrav.kz" class="contact-link__text">email@shelter.com</a>
                     </div>
                     <div class="contact-link">
-                        <img class="contact-link__icon" src="../assets/icons/icon-phone.svg" alt="">
-                        <p class="contact-link__text">+13 674 567 75 54</p>
+                        <a href="tel:8(71632)35534"><img class="contact-link__icon" src="../assets/icons/icon-phone.svg" alt=""></a>
+                        <a href="tel:8(71632)35534" class="contact-link__text">+13 674 567 75 54</a>
                     </div>
                 </article>
                 <article class="contact-info">
                     <p class="contact-info__title">We are waiting for your visit</p>
                     <div class="contact-link">
-                        <img class="contact-link__icon" src="../assets/icons/icon-marker.svg" alt="">
-                        <p class="contact-link__text">1 Central Street, Boston (entrance from the store)</p>
+                        <a href="https://www.google.com/maps/place/41%C2%B018'14.1%22N+81%C2%B054'06.1%22W/@41.3039285,-81.9022241,18z/data=!4m4!3m3!8m2!3d41.303921!4d-81.901693?entry=ttu" target="_blank"><img class="contact-link__icon" src="../assets/icons/icon-marker.svg" alt=""></a>
+                        <a href="https://www.google.com/maps/place/41%C2%B018'14.1%22N+81%C2%B054'06.1%22W/@41.3039285,-81.9022241,18z/data=!4m4!3m3!8m2!3d41.303921!4d-81.901693?entry=ttu" target="_blank" class="contact-link__text">1 Central Street, Boston (entrance from the store)</a>
                     </div>
                     <div class="contact-link">
-                        <img class="contact-link__icon" src="../assets/icons/icon-marker.svg" alt="">
-                        <p class="contact-link__text">18 South Park, London </p>
+                        <a href="https://www.google.com/maps/place/41%C2%B018'14.1%22N+81%C2%B054'06.1%22W/@41.3039285,-81.9022241,18z/data=!4m4!3m3!8m2!3d41.303921!4d-81.901693?entry=ttu" target="_blank"><img class="contact-link__icon" src="../assets/icons/icon-marker.svg" alt=""></a>
+                        <a href="https://www.google.com/maps/place/41%C2%B018'14.1%22N+81%C2%B054'06.1%22W/@41.3039285,-81.9022241,18z/data=!4m4!3m3!8m2!3d41.303921!4d-81.901693?entry=ttu" target="_blank" class="contact-link__text">18 South Park, London </a>
                     </div>
                 </article>
                 <img class="footer-image" src="../assets/images/footer-puppy.png" alt="puppy image">
@@ -109,7 +116,7 @@
                 </ul>
             </div>
             <button class="modal-window__close-button">
-                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                <svg class="close-button__img" xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
                     <rect x="1" y="1" width="50" height="50" rx="25" stroke="#F1CDB3" stroke-width="2"/>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M27.4262 26L31.7046 21.7216C32.0985 21.3277 32.0985 20.6892 31.7046 20.2954C31.3108 19.9016 30.6723 19.9016 30.2785 20.2954L26 24.5739L21.7215 20.2954C21.3276 19.9015 20.6892 19.9015 20.2953 20.2954C19.9016 20.6892 19.9016 21.3277 20.2953 21.7215L24.5738 26L20.2953 30.2785C19.9016 30.6723 19.9016 31.3108 20.2953 31.7046C20.6892 32.0985 21.3276 32.0985 21.7215 31.7046L26 27.4261L30.2785 31.7046C30.6723 32.0985 31.3108 32.0985 31.7046 31.7046C32.0985 31.3108 32.0985 30.6723 31.7046 30.2785L27.4262 26Z" fill="#292929"/>
                   </svg>

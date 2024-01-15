@@ -1,11 +1,22 @@
 @import "../../base-styles/base.sass"
 
 h2
-    @include custom-font($font-size: $h2, $line-height: 130%, $letter-spacing: 2.1px)
+    @include custom-font($font-size: --h2, $line-height: 130%, $letter-spacing: 2.1px)
 
 .container
-    max-width: 1200px
+    max-width: 1280px
     margin: 0 auto
+    padding: 0 40px
+
+    @include breakpoint($point: lg)
+        padding: 0 30px
+
+    @include breakpoint($point: esm)
+        padding: 0 10px
+
+img
+    block-size: auto
+    object-fit: cover
 
 .main-contents
     padding: 80px 0 100px 0
@@ -16,22 +27,75 @@ header
     position: absolute
     width: 100%
 
+
+
+.burger-menu
+    display: none
+
+    @include breakpoint($point: md)
+        display: flex
+        flex-direction: column
+        gap: 8px
+        position: relative
+        z-index: 1000
+        transition: 0.4s transform
+
+.burger-menu_active
+    transform: rotate(90deg)
+
+.line
+    background-color: #F1CDB3
+    width: 30px
+    height: 2px
+
 .header-container
     @include display-flex(space-between, center)
 
 .logo-title
-    @include custom-font($font-size: $logo-title, $color: $color-primary, $line-height: 110%, $letter-spacing: 1.92px)
+    @include custom-font($font-size: --logo-title, $color: $color-primary, $line-height: 110%, $letter-spacing: 1.92px)
     padding-bottom: 10px
 
 .logo-subtitle
-    @include custom-font($font-size: $logo-subtitle, $color: $color-light-xl, $letter-spacing: 1.3px)
+    @include custom-font($font-size: --logo-subtitle, $color: $color-light-xl, $letter-spacing: 1.3px)
 
-.nav
+.nav-list
     display: flex
     font-family: Arial, Helvetica, sans-serif
+    gap: 35px
+    transition: 0.45s transform
+
+    @include breakpoint($point: md)
+        gap: 40px
+        position: fixed
+        right: 0
+        top: 0
+        max-width: 320px
+        width: 100%
+        height: 100%
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        z-index: 999
+        background-color: $color-dark-3xl
+        transform: translateX(100%)
+
+.nav-list_active
+    transform: translateX(0px)
+
+.nav_blackout
+    position: fixed /* Stay in place */
+    z-index: 1 /* Sit on top */
+    left: 0
+    top: 0
+    width: 100% /* Full width */
+    height: 100% /* Full height */
+    background: rgba(41, 41, 41, 0.60)
 
 .nav-item__text
-    @include custom-font($font-size: $paragraph-l, $color: $color-dark-s, $line-height: 160%)
+    @include custom-font($font-size: --paragraph-l, $color: $color-dark-s, $line-height: 160%)
+
+    @include breakpoint($point: md)
+        font-size: --h2
 
 .nav-item__text:hover
     color: $color-light-s
@@ -41,48 +105,79 @@ header
     color: $color-light-s
     border-bottom: 3px solid $color-primary
 
-.nav-item:not(:first-child)
-    margin-left: 30px
-
 .home
     background: $start-screen-background
     padding-top: 180px
-
-.home-container
-    @include display-flex(space-between)
 
 .home-content
     @include display-flex(space-between, center)
     gap: 42px
 
+    @include breakpoint($point: lg)
+        flex-direction: column
+        justify-content: center
+        gap: 100px
+
 .home-content__main
+    max-width: 460px
     display: flex
     flex-direction: column
     gap: 42px
     align-items: flex-start
 
+    @include breakpoint($point: esm)
+        align-items: center
+
 .home-content__heading
-    @include custom-font($font-size: $h1, $color: $color-light-xl, $line-height: 130%)
+    @include custom-font($font-size: --h1, $color: $color-light-xl, $line-height: 130%)
+
+    @include breakpoint($point: esm)
+        text-align: center
 
 .home-content__text
     font-family: Arial, Helvetica, sans-serif
-    @include custom-font($font-size: $paragraph-l, $color: $color-dark-s, $line-height: 160%)
+    @include custom-font($font-size: --paragraph-l, $color: $color-dark-s, $line-height: 160%)
+
+    @include breakpoint($point: esm)
+        text-align: center
 
 
 
 .home-content__button
     background-color: $color-primary
 
+    @include breakpoint($point: lg)
+        align-self: center
+
+.home-img
+    @include breakpoint($point: xl)
+        max-width: 54.531vw
+
+
+    @include breakpoint($point: lg)
+        max-width: 70.363vw
+        align-self: flex-end
+
 .about-content
     @include display-flex($justify-content: center, $align-items: center)
     gap: 120px
 
+    @include breakpoint($point: lg)
+        flex-direction: column-reverse
+
 .about-content__main
     max-width: 430px
 
+.about-content__heading
+    @include breakpoint($point: esm)
+        text-align: center
+
 .about-content__subheading
     margin-top: 25px
-    @include custom-font($font-size: $paragraph-l, $color: $color-dark-xl, $line-height: 160%)
+    @include custom-font($font-size: --paragraph-l, $color: $color-dark-xl, $line-height: 160%)
+
+    @include breakpoint($point: esm)
+        text-align: justify
 
 .pets
     background-color: $color-light-l
@@ -98,16 +193,39 @@ header
 .pets-content__slider
     @include display-flex($justify-content: space-between, $align-items: center)
 
+    @include breakpoint($point: esm)
+        max-width: 270px
+        flex-wrap: wrap
+        justify-content: center
+        gap: 20px 80px
+
 .pets-cards
-    position: relative
     max-width: 990px
     @include display-flex($justify-content: space-between, $align-items: center)
     gap: 90px
-    overflow-x: hidden
-    scroll-behavior: smooth
+    overflow: hidden
+
+    @include breakpoint($point: xl)
+        max-width: 77.344vw
+        gap: 7.031vw
+
+    @include breakpoint($point: lg)
+        max-width: 580px
+        gap: 40px
+
+    @include breakpoint($point: md)
+        max-width: 75vw
+        gap: 5vw
+
+    @include breakpoint($point: sm)
+        max-width: 270px
+        gap: 0
+
+    @include breakpoint($point: esm)
+        order: 1
 
 .pets-cards__card
-    flex: 0 0 auto
+    flex-shrink: 0
     max-width: 270px
     width: 100%
     padding-bottom: 30px
@@ -118,8 +236,20 @@ header
     background-color: $color-light-s
     border-radius: 9px
 
+    @include breakpoint($point: xl)
+        max-width: 21.094vw
+
+    @include breakpoint($point: lg)
+        max-width: 270px
+    @include breakpoint($point: md)
+        max-width: 35vw
+
+    @include breakpoint($point: sm)
+        max-width: 270px
+
+
 .pets-cards__card-title
-    @include custom-font($font-size: $h3, $color: $color-dark-l, $letter-spacing: 1.2px)
+    @include custom-font($font-size: --h3, $color: $color-dark-l, $letter-spacing: 1.2px)
 
 .pets-cards__card-button
     border: 2px solid $color-primary
@@ -132,8 +262,15 @@ header
     border-radius: 100px
     border: 2px solid $color-primary
 
+.pets-slider__left-arrow
+    @include breakpoint($point: esm)
+        order: 2
+
 .pets-slider__right-arrow
     rotate: 180deg
+
+    @include breakpoint($point: esm)
+        order: 3
 
 .pets-content__link
     background-color: $color-primary
@@ -144,6 +281,7 @@ header
     flex-direction: column
     gap: 60px
 
+
 .help-content__heading
     text-align: center
 
@@ -151,12 +289,27 @@ header
     max-width: 1026px
     @include display-flex($justify-content: center,$align-items: center)
     flex-wrap: wrap
-    gap: 120px
+    gap: 60px
+
+    @include breakpoint($point: lg)
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(3, 1fr)
+
+    @include breakpoint($point: md)
+        grid-template-columns: repeat(2, 1fr)
+
+    @include breakpoint($point: esm)
+        gap: 30px
 
 .help-card
     @include display-flex($align-items: center)
+    width: 170px
     flex-direction: column
     gap: 30px
+
+    @include breakpoint($point: esm)
+        width: 130px
 
 .donation
     background-color: $color-light-l
@@ -165,13 +318,28 @@ header
     @include display-flex($justify-content: center, $align-items: center)
     gap: 30px
 
+    @include breakpoint($point: lg)
+        flex-direction: column-reverse
+        gap: 60px
+
 .donation-content__main
     @include display-flex($align-items: flex-start)
     flex-direction: column
     gap: 20px
 
+    @include breakpoint($point: esm)
+        align-items: center
+
+.donation-content__heading
+    @include breakpoint($point: esm)
+        text-align: center
+
 .donation-content__bank-info
-    @include custom-font($font-size: $paragraph-l, $color: $color-dark-l, $line-height: 110%, $letter-spacing: 0.9px)
+    @include custom-font($font-size: --paragraph-l, $color: $color-dark-l, $line-height: 110%, $letter-spacing: 0.9px)
+
+    @include breakpoint($point: esm)
+        line-height: 160%
+        letter-spacing: 0
 
 .credit-card
     padding: 10px 15px
@@ -182,13 +350,19 @@ header
 
 
 .credit-card__number
-    @include custom-font($font-size: $h3, $color: $color-dark-l, $line-height: 115%, $letter-spacing: 1.2px)
+    @include custom-font($font-size: --h3, $color: $color-dark-l, $line-height: 115%, $letter-spacing: 1.2px)
+
+    @include breakpoint($point: esm)
+        font-size: var(--h4)
 
 .donation-content__subheading
     max-width: 380px
     font-family: Arial, Helvetica, sans-serif
     font-style: italic
-    @include custom-font($font-size: $paragraph-s, $color: $color-dark-m, $line-height: 18px)
+    @include custom-font($font-size: --paragraph-s, $color: $color-dark-m, $line-height: 18px)
+
+    @include breakpoint($point: esm)
+        text-align: justify
 
 footer
     background: $start-screen-background
@@ -196,6 +370,11 @@ footer
 .footer-content
     padding-top: 40px
     @include display-flex($justify-content: space-between, $align-items: center)
+    flex-wrap: wrap
+
+    @include breakpoint($point: lg)
+        gap: 60px
+        justify-content: center
 
 .contact-info
     display: flex
@@ -203,17 +382,22 @@ footer
     align-items: flex-start
     gap: 40px
 
+    @include breakpoint($point: esm)
+        align-items: center
+
 .contact-info__title
     max-width: 280px
-    @include custom-font($font-size: $h2, $color: $color-light-xl, $line-height: 130%, $letter-spacing: 2.1px)
-    
+    @include custom-font($font-size: --h2, $color: $color-light-xl, $line-height: 130%, $letter-spacing: 2.1px)
+
+    @include breakpoint($point: esm)
+        text-align: center
 .contact-link
-    max-width: 302px
+    max-width: 304px
     @include display-flex($align-items: center)
     gap: 20px
     
 .contact-link__text
-    @include custom-font($font-size: $h3 , $color: $color-primary, $line-height: 115%, $letter-spacing: 1.2px)
+    @include custom-font($font-size: --h3 , $color: $color-primary, $line-height: 115%, $letter-spacing: 1.2px)
     
 .modal
     display: none
@@ -223,8 +407,7 @@ footer
     top: 0
     width: 100% /* Full width */
     height: 100% /* Full height */
-    background-color: rgb(0,0,0) /* Fallback color */
-    background-color: rgba(0,0,0,0.4) /* Black w/ opacity */
+    background: rgba(41, 41, 41, 0.60)
     overflow: hidden
 
 .modal-window
@@ -235,14 +418,45 @@ footer
     border-radius: 9px
     max-width: 900px
 
+    @include breakpoint($point: xl)
+        max-width: 80vw
+
+    @include breakpoint($point: lg)
+        max-width: 630px
+        margin: 15% auto
+
+    @include breakpoint($point: 700px)
+        max-width: 80vw
+        margin: 30% auto
+
+    @include breakpoint($point: sm)
+        margin: 70% auto
+
 .modal-window__close-button
     border: none
     position: absolute
     right: -50px
     top: -40px
 
+    @include breakpoint($point: sm)
+        width: 52px
+        top: -50px
+        right: -40px
+
 .modal-image
-    height: 500px
+    width: 500px
+
+    @include breakpoint($point: xl)
+        width: 40vw
+
+    @include breakpoint($point: lg)
+        width: 350px
+
+    @include breakpoint($point: 700px)
+        max-width: 40vw
+
+    @include breakpoint($point: sm)
+        display: none
 
 .modal-content
     max-width: 350px
@@ -253,16 +467,38 @@ footer
     gap: 40px
     color: #000
 
+    @include breakpoint($point: lg)
+        max-width: 280px
+        gap: 20px
+        padding: 0 11px
+
+    @include breakpoint($point: sm)
+        padding: 10px
+        align-items: center
+
 .modal-title__heading
+    @include custom-font($font-size: --h2, $color: #000, $line-height: 115%, $letter-spacing: 1.2px)
     color: #000
 
+    @include breakpoint($point: sm)
+        text-align: center
+
 .modal-title__subheading
-    @include custom-font($font-size: $h3, $color: #000, $line-height: 115%, $letter-spacing: 1.2px)
+    @include custom-font($font-size: --h3, $color: #000, $line-height: 115%, $letter-spacing: 1.2px)
     padding-top: 10px
+
+    @include breakpoint($point: sm)
+        text-align: center
 
 .modal-description
     line-height: 110%
     letter-spacing: 0.9px
+
+    @include breakpoint($point: lg)
+        font-size: 13px
+
+    @include breakpoint($point: sm)
+        text-align: justify
 
 .modal-list li:not(:last-child)
     padding-bottom: 10px

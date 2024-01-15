@@ -15,10 +15,21 @@ let flag = true;
 const initSlider = () => {
     const card = createCard(pets[activeCard]['img'], pets[activeCard]['name'], activeCard);
     petsCards.append(card);
-    nextCardGenerate();
-    prevCardGenerate();
-    containerDimensions = petsCards.firstChild.getBoundingClientRect();
-    containerWidth = containerDimensions.width + parseInt(petsCardsStyles.gap);
+    if(window.innerWidth > 600) {
+        nextCardGenerate();
+    }
+    if(window.innerWidth > 992) {
+        prevCardGenerate();
+    }
+    containerDimensions = petsCards.firstElementChild.getBoundingClientRect();
+    if(window.innerWidth <= 600) {
+        containerWidth = 270;
+    } else {
+        containerWidth = containerDimensions.width + parseFloat(petsCardsStyles.gap);
+    }
+    console.log(containerDimensions.width)
+    console.log(parseFloat(petsCardsStyles.gap))
+    console.log(containerWidth);
 }
 
 const nextCardGenerate =() => {
@@ -42,6 +53,7 @@ const nextSlide = () => {
     activeCard++;
     if(activeCard >= pets.length) activeCard = 0;
     nextCardGenerate();
+    console.log(containerWidth)
     animate({
         duration: 1000,
         draw: function(progress){

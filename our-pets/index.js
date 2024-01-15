@@ -1,5 +1,8 @@
-import { closeModalWindow } from "../script/modalWindow.js";
-import { petsCards } from "../script/pets-cards.js";
+import { showBurgerMenu } from "../scripts/burger-menu.js";
+import { closeModalWindow } from "../scripts/modalWindow.js";
+import { petsCards } from "../scripts/pets-cards.js";
+
+showBurgerMenu();
 
 petsCards();
 

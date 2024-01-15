@@ -1,14 +1,3 @@
-//font variables
-$paragraph-l: 15px
-$paragraph-s: 12px
-$button: 17px
-$paragraph-mobile-menu: 32px
-$logo-title: 32px
-$logo-subtitle: 13px
-$h1: 44px
-$h2: 35px
-$h3: 20px
-$h4: 15px
 
 //color varibles
 $color-light-xl: #fff
@@ -30,7 +19,7 @@ $font-family-arial: Arial, Helvetica, sans-serif
 
 //mixins
 @mixin custom-font($font-size, $color: $color-dark-l, $line-height: normal, $letter-spacing: normal)
-    font-size: $font-size
+    font-size: var($font-size)
     color: $color
     line-height: $line-height
     letter-spacing: $letter-spacing
@@ -39,6 +28,44 @@ $font-family-arial: Arial, Helvetica, sans-serif
     display: flex
     justify-content: $justify-content
     align-items: $align-items
+
+@mixin breakpoint($point)
+    @if $point == xl
+        @media screen and (max-width: 1280px)
+            @content
+    @if $point == lg
+        @media screen and (max-width: 992px)
+            @content
+    @else if $point == md
+        @media screen and (max-width:  767px)
+            @content
+    @else if $point == sm
+        @media screen and (max-width:  600px)
+            @content
+    @else if $point == esm
+        @media screen and (max-width:  500px)
+            @content
+    @else
+        @media screen and (max-width: $point)
+            @content
+
+//font variables
+:root
+    --paragraph-l: 15px
+    --paragraph-s: 12px
+    --button: 17px
+    --paragraph-mobile-menu: 32px
+    --logo-title: 32px
+    --logo-subtitle: 13px
+    --h1: 44px
+    --h2: 35px
+    --h3: 20px
+    --h4: 15px
+
+    
+    @include breakpoint($point: esm)
+        --h1: 25px
+        --h2: 25px
 
 
 //reseting
@@ -70,15 +97,16 @@ button
 
 body
     font-family: $font-family-georgia
-    font-size: $paragraph-l
+    font-size: var(--paragraph-l)
     color: $color-dark-l
 
 .button
     display: inline-block
     padding: 15px 45px
     border-radius: 100px
-    @include custom-font($font-size: $button, $color: $color-dark-3xl, $line-height: 130%, $letter-spacing: 1.02px)
+    @include custom-font($font-size: --button, $color: $color-dark-3xl, $line-height: 130%, $letter-spacing: 1.02px)
 
-.button:hover
-    background-color: $color-primary-light
-    border-color: $color-primary-light
+@media (hover: hover)
+    .button:hover
+        background-color: $color-primary-light
+        border-color: $color-primary-light
